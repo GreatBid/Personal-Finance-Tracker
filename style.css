@@ -1,0 +1,486 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f7fa;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+a {
+  text-decoration: none;
+  color: #3498db;
+}
+
+/* Form styles */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #2980b9;
+}
+
+.btn-secondary {
+  background-color: #95a5a6;
+}
+
+.btn-secondary:hover {
+  background-color: #7f8c8d;
+}
+
+.btn-small {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+/* Auth container styles */
+.auth-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 1rem;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.tab-btn.active {
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #3498db;
+  color: #3498db;
+}
+
+.tab-content {
+  padding: 2rem;
+}
+
+/* Dashboard styles */
+.dashboard-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  color: white;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dashboard-content {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  width: 300px;
+  background-color: white;
+  border-right: 1px solid #ddd;
+  padding: 1.5rem;
+}
+
+.account-list {
+  list-style: none;
+  margin: 1.5rem 0;
+}
+
+.account-list li {
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.account-list li a {
+  display: block;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  color: #333;
+  transition: all 0.3s;
+}
+
+.account-list li.active a,
+.account-list li a:hover {
+  background-color: #e9f5ff;
+  color: #3498db;
+}
+
+.account-name {
+  font-weight: 500;
+}
+
+.account-type {
+  font-size: 0.875rem;
+  color: #7f8c8d;
+  margin-bottom: 0.25rem;
+}
+
+.account-balance {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.add-account {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+}
+
+.account-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.charts-container {
+  margin-bottom: 2rem;
+}
+
+.chart-wrapper {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.transactions-section {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+}
+
+.transactions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.transactions-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transactions-table th,
+.transactions-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.transactions-table th {
+  font-weight: 600;
+  color: #7f8c8d;
+}
+
+.transactions-table tr.income .amount {
+  color: #27ae60;
+}
+
+.transactions-table tr.expense .amount {
+  color: #e74c3c;
+}
+
+.no-transactions {
+  text-align: center;
+  padding: 2rem;
+  color: #7f8c8d;
+}
+
+.transaction-form {
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.form-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.error-message {
+  background-color: #ffecec;
+  color: #e74c3c;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+
+.no-account {
+  text-align: center;
+  padding: 3rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.filter-notice {
+  background-color: #e9f5ff;
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-notice p {
+  margin: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .dashboard-content {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .account-header {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .transactions-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .transactions-header button {
+    width: 100%;
+  }
+}
+
+/* Monthly Summary Table Styles */
+.monthly-summary {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.summary-table th,
+.summary-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.summary-table th {
+  font-weight: 600;
+  color: #7f8c8d;
+}
+
+.summary-table td.income {
+  color: #27ae60;
+}
+
+.summary-table td.expense {
+  color: #e74c3c;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 768px) {
+  .summary-table {
+      font-size: 0.875rem;
+  }
+  
+  .summary-table th,
+  .summary-table td {
+      padding: 0.5rem;
+  }
+}
+
+/* Add these new styles to your existing style.css file */
+
+/* Index page specific styling - completely revised */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.index-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.index-container h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 500px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+  .index-container {
+    padding: 15px;
+  }
+  
+  .auth-container {
+    max-width: 95%;
+  }
+}
+
+/* Add this to style.css */
+.warning-message {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}

@@ -159,8 +159,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['add_transaction'])) {
                     <li class="<?php echo ($selected_account_id == $acc['AccountID']) ? 'active' : ''; ?>">
                         <a href="dashboard.php?account_id=<?php echo $acc['AccountID']; ?>">
                             <div class="account-name"><?php echo htmlspecialchars($acc['AccountName']); ?></div>
-                            <div class="account-type"><?php echo htmlspecialchars($acc['AccountType']); ?></div>
-                            <div class="account-balance">₹<?php echo number_format($acc['Balance'], 2); ?></div>
+                            <div class="account-balance">
+                                <p>Total Balance:</p>
+                                ₹<?php echo number_format($acc['Balance'], 2); ?>
+                            </div>
                         </a>
                     </li>
                     <?php endforeach; ?>

@@ -14,7 +14,7 @@ A web-based application that helps users track their personal finances by managi
 ##  1.Clone the Repository
 
 ```bash
-git clone https://github.com/GreatBid/Personal-Finance-Tracker.git
+git clone https://github.com/GreatBid/Personal-Finance-Tracker
 cd Personal-Finance-Tracker
 ```
 ##  2.Set Up the Database
